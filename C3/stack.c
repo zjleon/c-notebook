@@ -73,7 +73,7 @@ ElemType stackLastElem(struct Stacks *_stack) {
     return _stack->top->elem;
 }
 
-int main() {
+int pairParenthesis() {
     // struct Stacks stack1 = {NULL, NULL, 0, {}};
     struct Stacks stack1;
     initStack(&stack1);
@@ -110,5 +110,21 @@ int main() {
     }
 }
 
+// TODO P64
+int mathExpression() {
+    struct Stacks operator;
+    struct Stacks operand;
+    return 0;
+}
 
+int hanoiTower() {
+    // 3 tower are marked as x, y, z
+    // disk are marked from small radius to large radius as 1,..,n
+    // goal is to fill stack of the tower z with disk 1,..,n
+    // need to calculate steps to achive the goal, those steps form a stack
+}
+
+int main() {
+
+}
 
