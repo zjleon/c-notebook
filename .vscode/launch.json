@@ -1,28 +1,56 @@
 {
   "configurations": [
     {
-      "name": "(gdb) 启动",
+      "name": "(windows)C/C++: g++.exe build and debug active file",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
+      "miDebuggerPath": "E:\\code\\MSYS2\\ucrt64\\bin\\gdb.exe",
       "setupCommands": [
         {
-          "description": "为 gdb 启用整齐打印",
+          "description": "Enable pretty-printing for gdb",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         },
         {
-          "description": "将反汇编风格设置为 Intel",
+          "description": "Set Disassembly Flavor to Intel",
           "text": "-gdb-set disassembly-flavor intel",
           "ignoreFailures": true
         }
-      ]
+      ],
+      "preLaunchTask": "C/C++: g++.exe on windows"
+    },
+    {
+      "name": "(ubuntu)C/C++: g++ build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: gcc on ubuntu"
     },
     {
       "name": "C/C++ Runner: Debug Session",
@@ -31,8 +59,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/jerome/work/C/C4",
-      "program": "/home/jerome/work/C/C4/build/Debug/outDebug",
+      "cwd": "/home/jerome/work/C",
+      "program": "/home/jerome/work/C/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
