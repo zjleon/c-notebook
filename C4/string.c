@@ -3,12 +3,16 @@
 #define ElemType char
 #include <string.h>
 
-struct String {
-    char chars;
+struct HString {
+    char *chars;
     int length;
 };
 
-int StrAssign(struct String *str, char chars) {
+int StrAssign(struct HString *str, char chars) {
     
     return 0;
 };
+
+int main() {
+    return 0;
+}
