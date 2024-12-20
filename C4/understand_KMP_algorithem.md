@@ -81,3 +81,48 @@ current char doesn't equal, trigger next(j)
 next(j) -> 0
 j reach 0, i, j increase 1
 i++ -> 9; j++   ->1
+
+// P94, get_nextval simulation
+nextval = [len, 0]
+T = {5,a,a,a,a,b}
+     0 1 2 3 4 5
+
+// loop NO. 1
+i=1,j=0
+i<T[0] -> true
+j==0 -> true
+++i->2,++j->1
+T[i]!=T[j] -> a!=a -> false
+nextval[i]=nextval[j] -> nextval=[len, 0, 0]
+
+// loop NO. 2
+i=2,j=1
+i<T[0] -> true
+j==0 || T[i]==T[j] -> false||true
+++i->3,++j->2
+T[i]!=T[j] -> a!=a -> false
+nextval[i]=nextval[j] -> nextval=[len, 0, 0, 0]
+
+// loop NO. 3
+i=3,j=2
+i<T[0] -> true
+j==0 || T[i]==T[j] -> false||true
+++i->4,++j->3
+T[i]!=T[j] -> a!=a -> false
+nextval[i]=nextval[j] -> nextval=[len, 0, 0, 0, 0]
+
+// loop NO. 4
+i=4,j=3
+i<T[0] -> true
+j==0 || T[i]==T[j] -> false||true
+++i->5,++j->4
+T[i]!=T[j] -> b!=a -> true
+nextval[i]=j -> nextval=[len, 0, 0, 0, 0, 4]
+
+// loop NO. 5
+i=5,j=4
+i<T[0] -> false -> loop end
+
+final result: nextval=[len, 0, 0, 0, 0, 4]
+
+
