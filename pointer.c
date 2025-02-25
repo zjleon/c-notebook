@@ -14,10 +14,10 @@ void modifyValue(int *ptr) {
     *ptr = 100;
 }
 // 利用数组内部的连续性,传入第一个元素的地址,通过指针+n的方式来访问剩下的元素
-void print2DArr2(int *arr, int rows, int cols) {
+void print2DArr2(int *firstAddress, int rows, int cols) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
-            printf("%d ", *(arr + i*cols + j));
+            printf("%d ", *(firstAddress + i*cols + j));
         }
         printf("\n");
     }
