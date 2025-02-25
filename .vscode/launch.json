@@ -59,8 +59,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/jerome/work/C",
-      "program": "/home/jerome/work/C/build/Debug/outDebug",
+      "cwd": "/home/jerome/work/c-notebook/c_program_design/exp7",
+      "program": "/home/jerome/work/c-notebook/c_program_design/exp7/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
